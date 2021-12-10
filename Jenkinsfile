@@ -11,6 +11,12 @@ pipeline {
                 script{
                     mvnHome = tool "M2"
                     sh "${mvnHome}/bin/mvn -v"
+                    
+                    nodeHome = tool "NODE"
+                    sh "${nodeHome}/bin/node -v"
+                    
+                    goHome = tool "GO"
+                    sh "${goHome}/bin/go -v"
                 }
             }
         }
